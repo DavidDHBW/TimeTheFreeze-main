@@ -3,8 +3,8 @@ class MusicHandler:
 
     def __init__(self):
          self.tracks = [
-            "./music/dark-sanft-final.wav",
-            "./music/horrer_synths.wav"
+            "./music/dark-sanft-final.wav", #music in levels
+            "./music/horrer_synths.wav"     #music im start screen
         ]
     def playMusic(self):
         pygame.mixer.music.load(self.tracks[0])

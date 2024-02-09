@@ -16,7 +16,7 @@ running = True
 menu = Menu()
 levelManager = LevelManager()
 levelManager.createLevel()
-levelManager.createCollisionMap()
+levelManager.createCollisionMap()   
 player = Player(pygame.Vector2(400,50),5)
 collision = CollisionHandler(player,levelManager)
 superPower = doSuperPower()
