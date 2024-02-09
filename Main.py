@@ -4,6 +4,7 @@ from player.player import Player
 from collisionHandler import CollisionHandler
 from superPower import doSuperPower
 from Menu.menu import Menu
+from music.musicHandler import MusicHandler
 
 pygame.init()
 screen = pygame.display.set_mode((1800, 900))
@@ -19,6 +20,7 @@ levelManager.createCollisionMap()
 player = Player(pygame.Vector2(400,50),5)
 collision = CollisionHandler(player,levelManager)
 superPower = doSuperPower()
+musicHandler = MusicHandler()
 
 while running:
     menu.main(running,screen)
@@ -41,7 +43,7 @@ while running:
     #DRAW THE GAME
     levelManager.drawLevel(screen)
     player.draw(screen)
-    
+    MusicHandler.updateMusic(musicHandler)
     pygame.display.flip()
 
     dt = clock.tick(60)/1000  
