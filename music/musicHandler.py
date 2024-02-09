@@ -2,8 +2,10 @@ import pygame
 class MusicHandler:
 
     def __init__(self):
-        self.tracks = [2]
-        self.tracks[0] = "./music/dark-sanft-final.wav"
+         self.tracks = [
+            "./music/dark-sanft-final.wav",
+            "./music/horrer_synths.wav"
+        ]
     def playMusic(self):
         pygame.mixer.music.load(self.tracks[0])
         pygame.mixer.music.play()
